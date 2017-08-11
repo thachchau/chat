@@ -1,0 +1,66 @@
+<div class="col-md-6 col-md-offset-2 register-form">
+  <div class="header-login">
+    <h4 class="title">CHAT<small>application</small>
+        <span class="	glyphicon glyphicon-pencil icon"></span>
+    </h4>  
+  </div>
+  <form id="frmRegister">
+    <dx-validation-group>
+      <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="margin-top:7px">
+          <span class="label label-info">Email: </span>
+        </div>
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+          <dx-text-box placeholder="Email..." mode="email" [(value)]='localUserSignup.email'>
+            <dx-validator>
+              <dxi-validation-rule type="required" message="Email is required"></dxi-validation-rule>
+            </dx-validator>
+          </dx-text-box>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="margin-top:7px">
+          <span class="label label-info">Username: </span>
+        </div>
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+          <dx-text-box placeholder="Username..." [(value)]='localUserSignup.username'>
+            <dx-validator>
+              <dxi-validation-rule type="required" message="Username is required"></dxi-validation-rule>
+            </dx-validator>
+          </dx-text-box>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="margin-top:7px">
+          <span class="label label-info">Password: </span>
+        </div>
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+          <dx-text-box placeholder="Password..." mode="password" [(value)]='localUserSignup.password'>
+            <dx-validator>
+              <dxi-validation-rule type="required" message="Password is required"></dxi-validation-rule>
+            </dx-validator>
+          </dx-text-box>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="margin-top:7px">
+          <span class="label label-info">Confirm Password: </span>
+        </div>
+       <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+          <dx-text-box placeholder="Confirm Password..." mode="password" [(value)]='localUserSignup.cfm_password'>
+            <dx-validator>
+              <dxi-validation-rule type="required" message="Confirm Password is required"></dxi-validation-rule>
+            </dx-validator>
+          </dx-text-box>
+        </div>
+      </div>
+      <dx-button id="btnSignup" text="Sign up" [useSubmitBehavior]="true" (onClick)="signUp($event)">
+      </dx-button>
+      <a routerLink='/login' class="btn btn-link"> <span class="glyphicon glyphicon-remove"></span> Cancel</a>
+
+    </dx-validation-group>
+  </form>
+</div>

@@ -1,0 +1,195 @@
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 container">
+
+  <div class="row">
+    <div class="navigation">
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="navbar-header">
+          <a class="navbar-brand" routerLink='/home' class="link">
+            <h4 class="title">CHAT<small>application</small></h4>
+          </a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="name-user-logined" style="padding-top: 8px; padding-bottom: 5px;" data-toggle="modal" href="#modal-profile"
+              (click)="yourProfile($event, loginedUser)"><span><img src="{{currentUserAvatar}}" class="current-user-avatar"></span><span class="name-current-user">  Hi, {{loginedUser}}</span></a></li>
+          <li><a (click)="logout()" class="btn-logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-1">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+      <div class="row">
+        <a data-toggle="modal" href="#modal-profile" (click)="friendProfile($event, this.selectUser.selectUsername)">
+          <span class="user-chatting" style="margin-left: 5px; padding:2px; font-size: 120%">
+          {{nameFriendChatting}}</span>
+        </a>
+      </div>
+      <div class="row" *ngIf="nameFriendChatting == null">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 welcome-app">
+          <h2>Welcome to Chat Application</h2>
+          <img class="pic-cover" src="assets/res/cover.jpg" />
+        </div>
+      </div>
+      <div class="row" *ngIf="nameFriendChatting != null">
+        <div class="messages-view" style="overflow: auto; padding: 10px">
+          <div *ngFor="let message of messages" style="margin-bottom: 10px; width: 100%">
+            <div class="align-left" [ngClass]="{'text-left': message.sender != loginedUser}" *ngIf="message.sender != loginedUser">
+              <h6>{{message.time}}</h6>
+              <div>
+                <h5>{{message.text}}</h5>
+              </div>
+            </div>
+            <div class="align-right" [ngClass]="{'text-right':  message.sender == loginedUser}" *ngIf="message.sender == loginedUser">
+              <h6>{{message.time}}</h6>
+              <div>
+                <h5>{{message.text}}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" *ngIf="nameFriendChatting != null">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10" style="padding-left: 4px; padding-right: 0px">
+          <textarea class="form-control input-msg" rows="2" [(ngModel)]="message" (keyup.enter)="sendMessage()" placeholder="Type your message here..."></textarea>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+          <dx-button class="btn-send" text="Send" (onClick)="sendMessage()"></dx-button>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+      <div class="row">
+        <span class="label user-online">User Online: </span>
+        <div class="user-online-list" style="overflow: auto; padding: 10px">
+          <h5 *ngIf="this.useronlines.length == 0">No user online</h5>
+          <div *ngFor="let useronline of useronlines" style="margin: 2px; width: 100%">
+            <div class="item-user" (click)="chat($event, useronline.username)">
+              <h5>{{useronline.username}}
+                <img *ngIf="useronline.online == true" src="../../assets/res/online.png">
+              </h5>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <input class="txtbox-search" type="search" placeholder="Search..." (keyup.enter)="searchFriend()">
+      </div>
+      <div class="row">
+        <a class="btn btn-history" data-toggle="modal" href='#modal-id' style="padding: 0px" (click)="viewHistory()">Go to messenger <span class="glyphicon glyphicon-new-window"></span></a>
+      </div>
+
+      <div class="modal fade" id="modal-id" *ngIf="this.isOpenHistory == true">
+        <div #top class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button (click)="changeFlag()" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Messenger</h4>
+            </div>
+            <div class="modal-body" style="overflow: auto" *ngIf="this.flag == true">
+              <h4 *ngIf="contactedusers.length == 0">No contact user</h4>
+              <div *ngFor="let contacteduser of contactedusers">
+                <div class="item-history">
+                  <a data-toggle="modal" href="#modal-delete-msg">
+                    <span class="glyphicon glyphicon-remove remove-contact-user" aria-hidden="true"></span>
+                  </a>
+                  <div class="modal fade" id="modal-delete-msg">
+                    <div class="modal-dialog">
+                      <div class="modal-content" style="width: 60%; margin-left: 100px; margin-top: 100px">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="header-del" class="modal-title">Delete conversation</h4>
+                        </div>
+                        <div class="modal-body delete-contact">
+                          <h5>This will permanently delete the conversation history.</h5>
+                          <a class="yes" (click)="removeContact(contacteduser)" data-dismiss="modal">Delete</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h4 (click)="loadOldMessages($event, contacteduser)">{{contacteduser}}
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="modal-body" *ngIf="this.flag == false">
+              <span class="glyphicon glyphicon-menu-left icon-back" (click)="changeFlag()" aria-hidden="false"><span style="margin-bottom: 5px">Back              
+              </span></span>
+              <div class="content-oldMsg" *ngFor="let oldMessage of tmpOldMsgs" style="overflow: auto">
+                <div class="item-oldMsg">
+                  <h6>{{oldMessage.time}}</h6>
+                  <h4 *ngIf="oldMessage.sender == loginedUser"> <strong class="strong-me">You :  </strong> {{oldMessage.text}}
+                  </h4>
+                  <h4 *ngIf="oldMessage.sender != loginedUser"> <strong class="strong-you">{{oldMessage.sender}} :  </strong> {{oldMessage.text}}
+                  </h4>
+                </div>
+              </div>
+              <!-- <button (click)="more()">more...</button> -->
+              <a *ngIf="oldMessages.length > 5 && this.isSeeMore == true" class="more" (click)="more()">See more...</a>
+              <span *ngIf="count != 5" class="glyphicon glyphicon-menu-up icon-up" (click)="scroll(top)" aria-hidden="true"></span>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal-profile">
+        <div class="modal-dialog">
+          <div class="modal-content" style="width: 70%; margin-left: 70px;">
+            <div class="modal-header">
+              <button type="button" (click)="cancelEditClick()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" *ngIf="isyourprofile == false">{{this.profile.username}}'s profile</h4>
+              <h4 class="modal-title" *ngIf="isyourprofile == true">Your profile</h4>
+            </div>
+            <div class="modal-body">
+              <div class="profile">
+                <div class="row">
+                  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img *ngIf="tmp == null" src="../../assets/res/avatar.jpg" class="image">
+                    <img *ngIf="tmp != null" src="{{nameImg}}" class="image">
+                  </div>
+                  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 user-info" *ngIf="isyourprofile == true">
+                    <h4><strong>ID: </strong> {{this.profile.id}}</h4>
+                    <h4><strong>Username: </strong> {{this.profile.username}}</h4>
+                    <h4><strong>Email: </strong> {{this.profile.email}}</h4>
+                  </div>
+                  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 user-info" *ngIf="isyourprofile == false">
+                    <h4><strong>ID: </strong> {{this.profile.id}}</h4>
+                    <h4><strong>Username: </strong> {{this.profile.username}}</h4>
+                    <h4><strong>Email: </strong> {{this.profile.email}}</h4>
+                  </div>
+                </div>
+                <div class="row">
+                  <a class="edit-avatar" *ngIf="isyourprofile == true" (click)="editProfileClick()">Change avatar</a>
+                  <h6 class="update-successfull" *ngIf="intUpdateAvatar == 1">Update avatar successfull !</h6>
+                  <h6 class="no-img-choosen" *ngIf="intUpdateAvatar == -1">No image choosen</h6>
+                  <form id="form" #form *ngIf="isEditProfile == true">
+                    <div id="fileuploader-container">
+                      <dx-file-uploader #fileUploader uploadMode="instantly" name="file" uploadUrl="http://10.0.0.206:8080/cntc/rest/user/upload"
+                        [(value)]="pathImg" labelText="or drop image here" selectButtonText="browse" [multiple]="false" accept="image/*"></dx-file-uploader>
+                    </div>
+                    <dx-button id="button" text="Update" type="success" (onClick)="updateClick()">
+                    </dx-button>
+                    <dx-button id="button" text="Cancel" type="danger" (onClick)="cancelEditClick()">
+                    </dx-button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>

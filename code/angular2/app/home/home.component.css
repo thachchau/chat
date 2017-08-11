@@ -1,0 +1,301 @@
+.chat-application{padding: 10px; background-color: whitesmoke; border: 1px double black; margin-left: 70px;
+     border-radius: 4px }
+.user-online-list{max-height: 400px;}
+.btn-send{height: 55px;  width: 120px; padding: 3px; background-color: lightskyblue}
+    
+    .list-userOnline{ margin-right: 5px; border: .5px solid ghostwhite;}
+
+.row-1{padding-top: 10px}
+.container{background-color: ghostwhite; padding-bottom: 10px; border: 1px solid black ; border-radius: 2px}
+.navigation{height: 50px; background-color: whitesmoke; border-radius: 3px; text-decoration: none; border-bottom: 1px solid gainsboro}
+.title{padding-top: 6px; padding-left: 2px; text-decoration: none;}
+.link{text-decoration: none}
+.btn-logout{cursor: pointer; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 120%; color: #2E64FE;font-size: 100%; }
+.user-online-list{border: .2px solid gainsboro; border-radius: 2px; margin: 5px; background-color: whitesmoke; min-height: 450px; max-height: 450px}
+.user-online{color: #2E64FE; size: 250%;}
+.txtbox-search{margin: 2px; margin-left: 5px; width: 97.5%; border-radius: 2px; height: 30px}
+.info-friend{height: 250px; border-radius: 3px; margin: 15px; margin-top: 25px; background-color: white}
+.messages-view{max-height: 450px; min-height: 450px; background-color: #EFFBFB; 
+    border-radius: 1px; padding: .7px; border: .2px double #D8D8D8; margin: 3px; margin-right: 15px}
+
+    .btn-history{size: 10%; margin-left: 60%; margin-top: 5px}
+    .btn-connect-user{margin-left: 65%; size: 40%}
+.user-online{max-height: 450px}
+
+.align-left{
+   min-width: 50%;padding: 5px;
+    /* border: 1px solid gray;
+     background-color: white; */
+}
+
+.user-online-list > h5{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: initial; font-weight: 120%; color: grey}
+
+.user-chatting{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: initial; font-weight: 120%; color: grey}
+
+.align-right{
+     min-width: 50%;padding: 5px;
+      /* border: 1px solid gray;
+       background-color: white; */
+}
+
+.align-left, .align-right{ min-height: 50px; 
+    /* border-radius: 6px; */
+}
+
+.align-left > h6 {font-style: italic; font-weight: 70%; font-size: 70%; color: grey; text-align: left;  }
+.align-right > h6 {font-style: italic; font-weight: 70%; font-size: 70%; color: grey; text-align: right; }
+
+.align-left > div{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 110%; color: black; min-width: 18%; max-width: 40%; background-color: lightgray; min-height: 35px; border-radius: 12px;}
+.align-right > div{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 110%; color: black; min-width: 18%; max-width: 40%; background-color: deepskyblue; margin-left: 60%; min-height: 35px; border-radius: 12px;}
+
+.align-left > div > h5{padding-top: 8px; padding-left: 10px; padding-bottom: 10px}
+.align-right > div > h5{padding-top: 8px; padding-right: 10px; padding-bottom: 10px}
+
+.item-user{ border: .6px solid lightgray; height: 40px; background-color: white; border-radius: 2px; margin-bottom: 4px;}
+.item-user > h5{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 90%; color: gray; margin-left: 10px; margin-bottom: 10px; margin-top: 12px;     }
+.item-user:hover{background-color: #EFFBFB; cursor: pointer}
+.item-user :focus{background-color: #EFFBFB; cursor: pointer}
+.item-user > h5 > img{width: 10px; height: 10px;float: right; margin-right: 15px}
+
+.welcome-app{margin-left: 25px}
+
+.welcome-app > h2{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: initial; font-weight: 120%; color: grey; border-bottom-style: double; padding-bottom: 5px; width: 90%};
+.welcome-app > img {width: 90%}
+
+.item-history{height: 60px; width: 100%; background-color: white; margin: 2px; margin-left: 0px; border: .3px solid gray; border-style: double}
+.item-history:hover{background-color: whitesmoke;}
+.item-history > h4{margin: 23px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 100%; color: darkblue; border-radius: 10px}
+.item-history>h4:hover{cursor: default}
+
+.delete-contact{margin: 10px;}
+
+.header-del {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 90%; color: dimgray;font-size: 80%; margin-top: 5px}
+
+.delete-contact > h5{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 90%; color: dimgray;font-size: 95%;}
+.yes{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold ;color: dimgray;font-size: 110%; text-decoration: none; float: right; margin-right: 20px; padding-bottom: 15px}
+.yes:hover, .no:hover{cursor: pointer}
+.yes{color: darkred}
+.modal-title{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: initial; font-weight: 120%; color: grey;  width: 100%}
+
+.icon-back{border: .3px solid gray; padding: 7px; background-color: whitesmoke; border-radius: 2px}
+.icon-back:hover{cursor: pointer; background-color: aliceblue}
+
+.item-oldMsg{margin: 10px; border-bottom: 1.5px double whitesmoke;margin-top: 20px;}
+.item-oldMsg>h6{font-style: italic; font-weight: 70%; font-size: 70%; color: grey; text-align: left; }
+.item-oldMsg>h4{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 90%; color: dimgray;font-size: 95%; line-height: 150%}
+.strong-me{color: #2E64FE; font-style: italic; font-weight: 70%; font-size: 80%;}
+.strong-you{color: black; font-style: italic; font-weight: 70%; font-size: 80%;}
+
+.more{ margin-left: 7px; text-decoration: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 120%;
+font-style: italic}
+.more:hover{cursor: pointer}
+.icon-up{float: right}
+.icon-up:hover{cursor: pointer}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.kv-avatar .krajee-default.file-preview-frame,.kv-avatar .krajee-default.file-preview-frame:hover {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+}
+.kv-avatar .file-input {
+    display: table-cell;
+    max-width: 220px;
+}
+.kv-reqd {
+    color: red;
+    font-family: monospace;
+    font-weight: normal;
+}
+
+.image{width: 110px; height: 110px;}
+
+.user-info > h4{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 90%; color: dimgray;font-size: 95%; line-height: 150%}
+
+#form {
+    max-width: 600px;
+    margin: auto;
+}
+ #button {
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+ }
+#fileuploader-container{
+    border: 1px solid #d3d3d3;
+    margin: 10px 10px 0 10px;
+}
+
+.edit-avatar{text-decoration: none; cursor: pointer; margin-left: 35px; font-size: 80%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #2E64FE }
+
+.current-user-avatar{width: 35px; height: 35px; border-radius: 20px}
+
+.name-current-user{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 120%; color: #2E64FE;font-size: 100%; line-height: 150%}
+
+.update-successfull{margin: 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: green; font-weight: 90%;}
+.no-img-choosen{margin: 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: goldenrod; font-weight: 90%;}
+.chat-application{padding: 10px; background-color: whitesmoke; border: 1px double black; margin-left: 70px;
+     border-radius: 4px }
+.user-online-list{max-height: 400px;}
+.btn-send{height: 55px;  width: 120px; padding: 3px; background-color: lightskyblue}
+    
+    .list-userOnline{ margin-right: 5px; border: .5px solid ghostwhite;}
+
+.row-1{padding-top: 10px}
+.container{background-color: ghostwhite; padding-bottom: 10px; border: 1px solid black ; border-radius: 2px}
+.navigation{height: 50px; background-color: whitesmoke; border-radius: 3px; text-decoration: none; border-bottom: 1px solid gainsboro}
+.title{padding-top: 6px; padding-left: 2px; text-decoration: none;}
+.link{text-decoration: none}
+.btn-logout{cursor: pointer; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 120%; color: #2E64FE;font-size: 100%; }
+.user-online-list{border: .2px solid gainsboro; border-radius: 2px; margin: 5px; background-color: whitesmoke; min-height: 450px; max-height: 450px}
+.user-online{color: #2E64FE; size: 250%;}
+.txtbox-search{margin: 2px; margin-left: 5px; width: 97.5%; border-radius: 2px; height: 30px}
+.info-friend{height: 250px; border-radius: 3px; margin: 15px; margin-top: 25px; background-color: white}
+.messages-view{max-height: 450px; min-height: 450px; background-color: #EFFBFB; 
+    border-radius: 1px; padding: .7px; border: .2px double #D8D8D8; margin: 3px; margin-right: 15px}
+
+    .btn-history{size: 10%; margin-left: 60%; margin-top: 5px}
+    .btn-connect-user{margin-left: 65%; size: 40%}
+.user-online{max-height: 450px}
+
+.align-left{
+   min-width: 50%;padding: 5px;
+    /* border: 1px solid gray;
+     background-color: white; */
+}
+
+.user-online-list > h5{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: initial; font-weight: 120%; color: grey}
+
+.user-chatting{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: initial; font-weight: 120%; color: grey}
+
+.align-right{
+     min-width: 50%;padding: 5px;
+      /* border: 1px solid gray;
+       background-color: white; */
+}
+
+.align-left, .align-right{ min-height: 50px; 
+    /* border-radius: 6px; */
+}
+
+.align-left > h6 {font-style: italic; font-weight: 70%; font-size: 70%; color: grey; text-align: left;  }
+.align-right > h6 {font-style: italic; font-weight: 70%; font-size: 70%; color: grey; text-align: right; }
+
+.align-left > div{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 110%; color: black; min-width: 18%; max-width: 40%; background-color: lightgray; min-height: 35px; border-radius: 12px;}
+.align-right > div{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 110%; color: black; min-width: 18%; max-width: 40%; background-color: deepskyblue; margin-left: 60%; min-height: 35px; border-radius: 12px;}
+
+.align-left > div > h5{padding-top: 8px; padding-left: 10px; padding-bottom: 10px}
+.align-right > div > h5{padding-top: 8px; padding-right: 10px; padding-bottom: 10px}
+
+.item-user{ border: .6px solid lightgray; height: 40px; background-color: white; border-radius: 2px; margin-bottom: 4px;}
+.item-user > h5{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 90%; color: gray; margin-left: 10px; margin-bottom: 10px; margin-top: 12px;     }
+.item-user:hover{background-color: #EFFBFB; cursor: pointer}
+.item-user :focus{background-color: #EFFBFB; cursor: pointer}
+.item-user > h5 > img{width: 10px; height: 10px;float: right; margin-right: 15px}
+
+.welcome-app{margin-left: 25px}
+
+.welcome-app > h2{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: initial; font-weight: 120%; color: grey; border-bottom-style: double; padding-bottom: 5px; width: 90%};
+.welcome-app > img {width: 90%}
+
+.item-history{height: 60px; width: 100%; background-color: white; margin: 2px; margin-left: 0px; border: .3px solid gray; border-style: double}
+.item-history:hover{background-color: whitesmoke;}
+.item-history > h4{ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 100%; color: darkblue; border-radius: 10px}
+.item-history>h4:hover{cursor: pointer}
+
+.modal-title{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: initial; font-weight: 120%; color: grey;  width: 100%}
+
+.icon-back{border: .3px solid gray; padding: 7px; background-color: whitesmoke; border-radius: 2px}
+.icon-back:hover{cursor: pointer; background-color: aliceblue}
+
+.item-oldMsg{margin: 10px; border-bottom: 1.5px double whitesmoke;margin-top: 20px;}
+.item-oldMsg>h6{font-style: italic; font-weight: 70%; font-size: 70%; color: grey; text-align: left; }
+.item-oldMsg>h4{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 90%; color: dimgray;font-size: 95%; line-height: 150%}
+.strong-me{color: #2E64FE; font-style: italic; font-weight: 70%; font-size: 80%;}
+.strong-you{color: black; font-style: italic; font-weight: 70%; font-size: 80%;}
+
+.more{ margin-left: 7px; text-decoration: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 120%;
+font-style: italic}
+.more:hover{cursor: pointer}
+.icon-up{float: right}
+.icon-up:hover{cursor: pointer}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.kv-avatar .krajee-default.file-preview-frame,.kv-avatar .krajee-default.file-preview-frame:hover {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+}
+.kv-avatar .file-input {
+    display: table-cell;
+    max-width: 220px;
+}
+.kv-reqd {
+    color: red;
+    font-family: monospace;
+    font-weight: normal;
+}
+
+.image{width: 110px; height: 110px;}
+
+.user-info > h4{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 90%; color: dimgray;font-size: 95%; line-height: 150%}
+
+#form {
+    max-width: 600px;
+    margin: auto;
+}
+ #button {
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+ }
+#fileuploader-container{
+    border: 1px solid #d3d3d3;
+    margin: 10px 10px 0 10px;
+}
+
+.edit-avatar{text-decoration: none; cursor: pointer; margin-left: 35px; font-size: 80%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #2E64FE }
+
+.current-user-avatar{width: 35px; height: 35px; border-radius: 20px}
+
+.name-current-user{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 120%; color: #2E64FE;font-size: 100%; line-height: 150%}
+
+.update-successfull{margin: 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: green; font-weight: 90%;}
+.no-img-choosen{margin: 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: goldenrod; font-weight: 90%;}
+
+.remove-contact-user{float: right; padding: 3px}
+.remove-contact-user:hover{background-color: #D8D8D8}

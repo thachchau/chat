@@ -1,0 +1,12 @@
+.register-form{background-color: whitesmoke; padding-left: 0px; padding-top: 15px; padding-bottom: 15px;
+     border: 1px double black; border-radius: 4px; margin-left: 23%; margin-top: 100px};
+dx-form{margin-left: 100px;}
+.row{margin: 5px}
+span{margin-left: 25px;}
+#btnSignup{margin-left: 43px; background-color: lightskyblue; width: 89.5%; margin-top: 6px}
+#btnCancel{background-color: tomato}
+.header-login{background-color: lightskyblue; height: 50px; margin: 20px; margin-left: 40px}
+.title{padding: 12px;  color: white; font-weight: bold}
+.icon{margin-left: 70%;}
+.btn-link{font-size: 85%; font-weight: bold; color: salmon; margin-left: 80%}
+.c{ color: royalblue}

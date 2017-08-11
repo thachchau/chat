@@ -1,0 +1,32 @@
+<div class="col-md-4 col-md-offset-4 login-form">
+  <div class="header-login">
+    <h4 class="title">CHAT<small>application</small>
+        <span class="glyphicon glyphicon-lock icon"></span>
+    </h4>  
+  </div>
+  <h6 *ngIf="isLoginOK == false">Username or password incorrect, try again !</h6>
+  <form (submit)="login()">
+    <dx-validation-group>
+    <div class="form-group">
+      <span class="label label-info">Username: </span>
+      <dx-text-box placeholder="Username..." [(value)]='localUserLogin.username'>
+        <dx-validator>
+          <dxi-validation-rule type="required" message="Username is required"></dxi-validation-rule>
+        </dx-validator>
+      </dx-text-box>
+    </div>
+    <div class="form-group">
+      <span class="label label-info">Password: </span>
+      <dx-text-box placeholder="Password..." mode="password" [(value)]='localUserLogin.password'>
+        <dx-validator>
+          <dxi-validation-rule type="required" message="Password is required" mode></dxi-validation-rule>
+        </dx-validator>
+      </dx-text-box>
+    </div>
+
+    <dx-button id="btnLogin" text="Login" [useSubmitBehavior]="true">
+      </dx-button>
+    <a routerLink='/register' class="btn btn-link"> <span class="glyphicon glyphicon-link"></span> Register ?</a>
+    </dx-validation-group>
+  </form>
+</div>

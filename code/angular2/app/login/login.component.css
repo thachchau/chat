@@ -1,0 +1,7 @@
+.login-form{background-color: whitesmoke; padding: 15px; border: 1px double black; border-radius: 4px; margin-top: 100px}
+#btnLogin{background-color: lightskyblue; width: 100%}
+.btn-link{font-size: 85%; font-weight: bold; margin-left: 75%;}
+.header-login{background-color: lightskyblue; height: 50px; margin-bottom: 15px}
+.title{padding: 12px;  color: white; font-weight: bold}
+.icon{margin-left: 60%;}
+.login-form > h6{margin: 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: brown; font-weight: 120%; font-style: italic}
